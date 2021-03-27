@@ -32,7 +32,7 @@ int main() {
 	} else {
 		total_result = local_result;
 		for(source = 1; source < comm_sz; source++) {
-			MPI_Recv(&local_result, 1, MPI_DOUBLE, source, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+			MPI_Recv(&local_result, 1, MPI_DOUBLE, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 			total_result += local_result;
 		}
 	}
