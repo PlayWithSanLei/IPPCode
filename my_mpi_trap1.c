@@ -4,7 +4,7 @@
  * 本程序是利用并行方式使用梯形法则计算二次函数的积分
  * 其中a,b,n均为写死的，不可以从外部输入
  */
-#include <mpich/mpi.h>
+#include <mpi.h>
 #include <stdio.h>
 
 double Trap(double a, double b, int n, double h);
